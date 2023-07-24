@@ -1,0 +1,28 @@
+import React, { useState, useEffect } from 'react';
+const SupportChat = () => {
+  const [messages, setMessages] = React.useState([]);
+
+  useEffect(() => {
+    fetch('/api/v1/support/chat')
+      .then((response) => response.json())
+      .then((data) => setMessages(data));
+  }, []);
+
+  return (
+    <div className="support-chat">
+      <img src={emoji} alt="Support Chat" />
+      {showChat && (
+        <div className="chat-window">
+          <h2>User/Support Dialog</h2>
+          <ul className="message-logs">
+            {messages.map((message, index) => (
+              <li key={index}>{message}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SupportChat;

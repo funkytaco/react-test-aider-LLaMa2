@@ -1,0 +1,24 @@
+support-chat/
+├── node_modules/
+│   ├── react/
+│   │   ├── react-dom.js
+│   │   └── react-scripts.js
+│   ├── react-scripts-ts/
+│   ├── ts-node/
+│   └── ... (other dependencies)
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── SupportChat.js
+│   │   └── ... (other components)
+│   ├── containers/
+│   │   ├── App.js
+│   │   └── ... (other containers)
+│   ├── images/
+│   ├── index.css
+│   └── public/
+├── tsconfig.json
+├── package.json
+└── yarn.lock

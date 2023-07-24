@@ -1,0 +1,22 @@
+import React from 'react';
+const SupportChat = () => {
+  const [showChat, setShowChat] = React.useState(false);
+
+  const handleClick = () => {
+    setShowChat(!showChat);
+  };
+
+  return (
+    <div className="support-chat">
+      <img src={emoji} alt="Support Chat" />
+      {showChat && (
+        <div className="chat-window">
+          <h2>User/Support Dialog</h2>
+          <ul className="message-logs"></ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SupportChat;
